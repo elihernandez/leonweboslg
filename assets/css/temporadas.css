@@ -1,0 +1,175 @@
+/* Estilos #temporadas */
+
+#temporadas .header-temporadas {
+	position: absolute;
+	width: 100%;
+	height: 15%;
+	/*border: 1px solid red;*/
+}
+
+#temporadas .barra-lateral {
+	position: absolute;
+	top: 15%;
+	width: 15%;
+	height: 85%;
+	padding-top: 10px;
+	/*border: 1px solid green;*/
+}
+
+#temporadas .contenido-temporadas {
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	width: 85%;
+	height: 85%;
+	/*border: 1px solid yellow;*/
+	padding: 10px;
+	overflow-y: hidden;
+	transition-property: opacity;
+	transition-duration: 300ms;
+	transition-timing-function: ease;
+	transition-delay: 0ms;
+}
+
+#temporadas .contenido-temporadas.oscurecer {
+	opacity: 0.3
+}
+
+#temporadas .contenido-temporadas.oscurecer .spinner {
+	opacity: none;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+}
+
+
+/* Estilos Header Temporadas */
+
+#temporadas .header-temporadas .logo {
+	/*margin-top: 1%;*/
+	width: 8%;
+	height: 100%;
+	position: absolute;
+	/*border: 1px solid red;*/
+}
+
+#temporadas .header-temporadas .logo img {
+	width: 100%;
+	height: auto;
+	/*border: 1px solid red;*/
+	vertical-align: middle;
+}
+
+#temporadas .header-temporadas .info {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin-left: 8%;
+	/*margin-top: 1%;*/
+	color: white;
+	/*border: 1px solid white;*/
+}
+
+#temporadas .header-temporadas .info .titulos {
+	width: 100%;
+	top: 25%;
+	height: 50%;
+	position: absolute;
+	/*border-bottom: 1px solid white;*/
+}
+
+#temporadas .header-temporadas .info .titulos .titulo {
+	width: 100%;
+	height: 40%;
+	font-size: 26.06px;
+	/*border: 1px solid green;*/
+}
+
+#temporadas .header-temporadas .info .titulos .subtitulo {
+	width: 100%;
+	height: 60%;
+	top: 40%;
+	font-size: 39.1px;
+	font-weight: 700;
+	/*border: 1px solid yellow;*/
+}
+
+/* Estilos Barra Lateral */
+
+#temporadas .barra-lateral .item {
+	padding: 10px;
+	color: white;
+	/*border: 1px solid green;*/
+}
+
+#temporadas .barra-lateral .item:focus {
+	color: orange;
+}
+
+#temporadas .barra-lateral .item.active {
+	color: rgb(255, 184, 51);
+	/*border: 1px solid green;*/
+}
+
+#temporadas .barra-lateral .item:focus.active {
+	color: rgb(255, 184, 51);
+	/*border: 1px solid green;*/
+}
+
+#temporadas .barra-lateral .titulo-temporada {
+	font-weight: 700;
+	font-size: 33px;
+}
+
+/* Estilos Contenido Temporadas */
+
+#temporadas #contenido-temporadas .item {
+	position: relative;
+	width: 100%;
+	height: 188px;	
+	/*border: 1px solid yellow;*/
+	color: white;
+	margin-bottom: 10px;
+	border-radius: 0px 5px 5px 0px;
+}
+
+#temporadas #contenido-temporadas .item:focus {
+	background-color: orange;
+}
+
+#temporadas #contenido-temporadas .item img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	width: 20%;
+	/*border: 1px solid yellow;*/
+	transform: scale(0.95);
+	transition-property: transform;
+	transition-duration: 400ms;
+	transition-timing-function: ease;
+	transition-delay: 0ms;
+}
+
+#temporadas #contenido-temporadas .item:focus img {
+	transform: scale(1);
+}
+
+#temporadas #contenido-temporadas .item .titulo {
+	position: absolute;
+	left: 20%;
+	height: 16%;
+	font-size: 30px;
+	/*border: 1px solid yellow;*/
+	padding: 10px 10px;
+}
+
+#temporadas #contenido-temporadas .item .description {
+	position: absolute;
+	left: 20%;
+	top: 16%;
+	height: 84%;
+	/*border: 1px solid yellow;*/	
+	overflow-y: hidden;
+	padding: 10px 10px;
+	margin-top: 10px;
+}

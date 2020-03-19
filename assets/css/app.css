@@ -1,0 +1,459 @@
+:root{
+	--border-view: 1px;
+}
+
+html, body{
+	height: 100%;
+	width: 100%;
+  	margin:0;
+  	padding: 0;
+  	background: rgb(0,0,0);
+  	font-family: 'Roboto', sans-serif;
+  	overflow-y: hidden;
+  	overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+	padding: 0;
+	margin: 0;
+}
+
+#app{
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	position: absolute;
+	transition-property: opacity;
+	transition-duration: 400ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	opacity: 1;
+}
+
+#app.opacity{
+	opacity: 0.4;
+}
+
+#loader-logo{
+	opacity: 1;
+}
+
+#login-view{
+	z-index: 2;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	background-image: url('../images/fondos/background_login.png');
+	background-size: cover;
+	/*border: 2px solid red;*/
+}
+
+#login-view .form-login{
+	z-index: 2;
+	position: absolute;
+	width: 50%;
+	top: 0%;
+	height: 70%;
+	left: 0%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	transition-property: opacity;
+	transition-duration: 500ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	opacity: 0;
+	padding-left: 10%; 
+	padding-right: 10%; 
+}
+
+#login-view .form-login .info-login h3{
+	font-family: 'Roboto', sans-serif;
+	font-size: 55px;
+	font-weight: 700;  
+	color: white;
+}
+
+#login-view .form-login .info-login h4{
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	font-weight: 500;  
+	color: rgba(255,255,255,0.9);
+}
+
+#login-view .form-login form .form-group{
+	margin-bottom: 25px;
+}
+
+#login-view .form-login form .form-group input{
+	padding-top: 35px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: black;
+}
+
+#login-view .form-login form .form-control{
+	height: 70px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 28px;
+	font-weight: 500; 
+}
+
+#login-view .form-login form label{
+	position: absolute;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+#login-view .form-login form label h4{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 500; 
+	color: black;
+	opacity: 0.55;
+}
+
+#login-view .form-login form button{
+	margin-top: 20px;
+	height: 70px;
+	width: 100%;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 21px;
+	font-weight: 500; 
+	color: white;
+	background-color: transparent;
+	transition-property: color, background-color;
+	transition-duration: 200ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	border: 2px solid white;
+}
+
+#login-view .form-login form button:focus{
+	color: black;
+	background-color: white;
+}
+
+#login-view .form-login span.undo-button{
+	margin-top: 30px;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	position: relative;
+	color: white;
+	background-color: transparent;
+	min-width: 200px;
+	height: 70px;
+	border: 2px solid white;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 500; 
+	border-radius: 5px;
+	font-size: 21px;
+	transition-property: color, background-color;
+	transition-duration: 200ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+}
+
+#login-view .form-login span.undo-button:focus{
+	color: black;
+	background-color: white;
+}
+
+#login-view .form-login form h4.info-web{
+	margin-top: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: white;
+	opacity: 0.8;
+}
+
+
+#login-view .form-login.fadeIn{
+	opacity: 1;
+}
+
+#login-view .info{
+	position: relative;
+	width: 50%;
+	left: 2.5%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition-property: opacity;
+	transition-duration: 500ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+}
+
+#login-view .info.fadeOut{
+	opacity: 0;
+}
+
+#login-view .info .el.message{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#login-view .info .el.message .el{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	/*border: 2px solid red;*/
+}
+
+#login-view .info .el.message .el.logo{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#login-view .info .el.message .el.logo img{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+#login-view .info .el.message .el.message{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+}
+
+#login-view .info .el.message .el.message h1{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 65px;
+	line-height: 65px;
+	padding-left: 40px;
+}
+
+#login-view .info .el.message .el.message h2{
+	margin-top: 20px;
+	padding-left: 40px;
+}
+
+
+#login-view .info .el.buttons{
+	position: relative;
+	width: 60%;
+	left: 20%;
+	height: 20%;
+	/*border: 2px solid green;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: flex-start;
+	align-content: center;
+	color: white;
+}
+
+#login-view .info .el.buttons span{
+	min-width: 250px;
+	/*border: 2px solid white;*/
+	border-radius: 5px;
+	text-align: center;
+	transition-property: background-color, color;
+	transition-duration: 200ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+}
+
+#login-view .info .el.buttons span:focus{
+	background-color: white;
+	color: black;
+}
+
+#login-view .info .el.buttons span h3{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500; 
+}
+
+#login-view .footer-info{
+	z-index: 2;
+	position: absolute;
+	width: 100%;
+	height: 7%;
+	bottom: 0;
+	/*position: absolute;*/
+	/*border: 2px solid yellow;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#login-view .footer-info h4{
+	margin-bottom: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 21px;
+	font-weight: 500; 
+	color: white;
+}
+
+#login-view .register-info{
+	position: absolute;
+	width: 50%;
+	left: 2.5%;
+	top: 0;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	transition-property: opacity;
+	transition-duration: 500ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	opacity: 0;
+}
+
+#login-view .register-info.fadeIn{
+	opacity: 1;
+}
+
+#login-view .register-info .el.logo{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+#login-view .register-info .el.logo img{
+	position: relative;
+	width: 80%;
+	height: auto;
+}
+
+#login-view .register-info .el.info-web{
+	text-align: center;
+	margin-top: 40px;
+}
+
+#login-view .register-info .el.info-web h3{
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 35px;
+}
+
+#login-view .register-info span.undo-button{
+	margin-top: 50px;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	position: relative;
+	color: white;
+	background-color: transparent;
+	min-width: 200px;
+	height: 70px;
+	border: 2px solid white;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 500; 
+	border-radius: 5px;
+	font-size: 21px;
+	transition-property: color, background-color;
+	transition-duration: 200ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+}
+
+#login-view .register-info span.undo-button:focus{
+	color: black;
+	background-color: white;
+}
+
+.loader-logo{
+	z-index: 3;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.loader-spinner{
+	z-index: 3;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,1);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+
+.chart-skills {
+z-index: 2;
+  position: absolute;
+  width: 350px;
+  height: 175px;
+}
+
+.chart-skills::before,
+.chart-skills::after {
+  position: absolute;
+}
+
+.chart-skills::before {
+  content: '';
+  width: inherit;
+  height: inherit;
+  border: 45px solid rgba(211, 211, 211, .3);
+  border-bottom: none;
+  border-top-left-radius: 175px;
+  border-top-right-radius: 175px;
+}
+
+.chart-skills::after {
+  content: 'Top Skills';
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: cadetblue;
+}
+
+.chart-skills li {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border: 45px solid;
+  border-top: none;
+  border-bottom-left-radius: 175px;
+  border-bottom-right-radius: 175px;
+  transform-origin: 50% 0;
+}s

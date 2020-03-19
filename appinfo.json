@@ -1,0 +1,11 @@
+{
+    "id": "com.lap55.smarttv",
+    "version": "0.0.1",
+    "vendor": "My Company",
+    "type": "web",
+    "main": "index.html",
+    "title": "León",
+    "icon": "icon.png",
+    "largeIcon": "largeIcon.png",
+    "disableBackHistoryAPI": true
+}

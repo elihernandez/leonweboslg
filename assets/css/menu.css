@@ -1,0 +1,116 @@
+/* Estilos del spotlight */
+
+	#spotlight{
+		width: 100%;
+		height: 100%;
+		/*border: 2px solid red;*/
+	}
+
+
+	#spotlight .carousel {
+		position: absolute;
+		height: 70%;
+		width: 100%;
+		/*border: 2px solid red;*/
+	}
+
+	#spotlight .carousel-inner {
+		height: 100%;
+		width: 100%;
+	}
+
+	#spotlight .carousel-inner .item {
+		height: 100%;
+		width: auto;
+	}
+
+	#spotlight .carousel-inner .item img {
+		height: 100%;
+	    width: 100%;
+	    margin: auto;
+	}
+
+	#spotlight .text-spotlight {
+		position: relative;
+		display: none;
+		bottom: 55%;
+		text-align: center;
+	  	font-weight: 500;
+	  	color: white;
+	  	opacity: 0.9;
+	}
+
+/* Estilos del spotlight */
+
+/* Estilos de los botones de menu */
+
+	#secciones {
+		z-index: 2;
+		position: absolute;
+		width: 100%;
+		height: 30%;
+		top: 70%;
+		/*border: 2px solid green;*/
+	}
+
+	#secciones .lista {
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+
+	#secciones .lista .item {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		/*border: 2px solid red;*/	
+		padding: 0px 0px;
+		flex: 0 0 calc(100/6)%;
+		transform: scale(0.9);
+		transition-property: transform;
+		transition-duration: 200ms;
+		transition-timing-function: ease;
+		transition-delay: 0ms;
+	}
+
+	#secciones .item:focus {
+		/*border: 2px solid white;*/
+		transform: scale(1);
+	}
+
+	#secciones .item img {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		/*border: 2px solid white;*/
+		padding: 0px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;
+		transition-property: transform;
+		transition-duration: 200ms;
+		transition-timing-function: ease;
+		transition-delay: 0ms;
+		/*transform: scale(0.9);*/
+	}
+
+	#secciones .item .text-section {
+		position: absolute;
+		top: 30%;
+		left: 20%;
+	  	font-weight: 700;
+	  	font-size: 28px;
+	  	color: white;
+	  	opacity: 0.9;
+	}
+
+/* Estilos de los botones de menu */
+
+#infoweb {
+	position: absolute;
+	top: 95%;
+	height: 100%;
+	width: 100%;
+	color: white;
+	opacity: 0.9;
+	text-align: center;
+	/*border: 3px solid yellow;*/
+}

@@ -1,0 +1,346 @@
+/*Estilos del header*/
+	#header{
+		position: absolute;
+		z-index: 2;
+		top: 0%;
+		width: 100%;
+		height: 15%;
+		background-color: rgba(0, 0, 0, 0.7);
+		transition-property: top;
+	  	transition-duration: 600ms;
+	  	transition-timing-function: ease-in-out;
+	  	transition-delay: 100ms;
+	  	border: 1px solid black;
+	}
+
+	#header.ocultarHeader {
+		top: -15%;
+	}
+
+	#header .header {
+		position: absolute;
+		top: 5%;
+		height: 90%;
+		width: 95%;
+		left: 2.5%;
+	}
+
+	#header .logo img {
+		position: absolute;
+		height: 100%;
+		width: auto;
+	}
+
+	#header .item {	
+		/*border: solid 1px red;*/
+	}
+
+	#header .hora h2 {
+		font-size: 2.2em;
+		color: white;
+	}
+
+	@supports(object-fit: cover){
+	    eader .logo img{
+	      height: 100%;
+	      object-fit: cover;
+	      object-position: center center;
+	    }
+	}
+
+/*Estilos del header*/
+
+/*Estilos del video*/
+
+	#video {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+	}
+
+	#video video{
+		position:absolute;
+		height: 100%;
+		width: 100%;
+		top:0px;
+		left:0px;
+	}
+
+/*Estilos de video*/
+
+/*Info de Canal*/
+	#envivo #infoCanal {
+		z-index: 2;
+		position: absolute;
+		/*top: 62%;
+		height: 38%;*/
+		top: 62%;
+		height: 38%;
+		width: 100%;
+		opacity: 0.9;
+		color: white;
+		background-color: rgba(0, 0, 0, 0.7);
+		/*border: 2px solid white;*/
+		padding: 0px 20px;
+		transition-property: top;
+	  	transition-duration: 600ms;
+	  	transition-timing-function: ease-in-out;
+	  	transition-delay: 100ms;
+	  	border: 1px solid black;
+	}
+
+	#infoCanal.ocultarInfo {
+		top: 100%;
+	}
+
+	#infoCanal .item {
+		/*border: 2px solid red;*/
+	}
+
+	#infoCanal img {
+		position: relative;
+		width: 100%;
+		height: auto;	
+	}
+
+	#infoCanal .informacion-canal h3 {
+		margin: 10px 0px;
+	}
+
+	#infoCanal .informacion-canal h4 {
+		margin: 10px 0px;
+		font-weight: 400;
+	}
+/*Info de Canal*/
+
+/*Estilos de la guia*/
+	#envivo #catalogo-envivo {
+		z-index: 2;
+		position: absolute;
+		/*top: 62%;
+		height: 38%;*/
+		top: 62%;
+		height: 100%;
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		background-color: rgba(0, 0, 0, 0.7);
+		transition-property: top;
+	  	transition-duration: 600ms;
+	  	transition-timing-function: ease-in-out;
+	  	transition-delay: 100ms;
+	  	/*border: 1px solid white;*/
+	}
+
+	#envivo #catalogo-envivo.ocultarCatalogo {
+		top: 100%;
+	}
+
+	#envivo #catalogo-envivo.displayCatalogo {
+		display: none;
+	}
+
+	#envivo #catalogo-envivo .container {
+		width: 100%;
+		padding: 0px 0px;
+		transition-property: transform;
+	  	transition-duration: 375ms;
+	  	transition-timing-function: linear;
+	  	transition-delay: 0ms;
+	}
+
+	#envivo #catalogo-envivo .container .header {
+		margin: 0px 0px;
+		padding: 5px 10px;
+		width: 100%;
+		color: white;
+		opacity: 0.9;
+		background-color: rgba(0, 139, 274, 0.7);
+	}
+
+	#envivo #catalogo-envivo .container .header .posicion-contador{
+		margin-right: 5px;
+	}
+
+	#envivo #catalogo-envivo .container .header .text-contador{
+	}
+
+	#envivo #catalogo-envivo .container .header .total-contador{
+		margin-left: 5px;
+	}
+
+	#envivo #catalogo-envivo .container .lista {
+		width: 100%;
+	  	display: flex;
+	  	padding: 0px 0px;
+	  	margin: 0px 0px;
+	}
+
+	#envivo #catalogo-envivo .container .lista .item {
+	  padding: 0px 0px;
+	  background: transparent;
+	  flex: 0 0 19.8%;
+	  text-align: center;
+	  margin: 5px 5px;
+	  transition-property: transform, background;
+	  transition-duration: 375ms;
+	  transition-timing-function: linear;
+	  transition-delay: 0ms;
+	  color: white;
+	  opacity: 0.7;
+	}
+
+	#envivo #catalogo-envivo .container .lista .item:focus  {
+		outline: solid 5px white;
+		opacity: 0.9;
+	}
+
+	#envivo #catalogo-envivo .container .lista .item:focus img  {
+		transform: scale(1);
+	}
+
+	#envivo #catalogo-envivo .container .lista .item img {
+		position: relative;
+		width: 100%;
+		height: auto;	
+		transform: scale(0.93);	
+		transition-property: transform;
+		transition-duration: 400ms;
+		transition-timing-function: ease;
+		transition-delay: 0ms;
+	}
+
+	#envivo #catalogo-envivo .container .lista .item h3 {
+		margin: 10px 0px;
+	}
+
+	#envivo #catalogo-envivo .container .lista .item h4 {
+		margin: 10px 0px;
+		font-weight: 400;
+	}
+
+
+
+
+
+#envivo .catalogue{
+	position: absolute;
+	z-index: 2;
+	width: 94%;
+	left: 3%;
+	height: 40%;
+	bottom: 0;
+	/*border: 1px solid white;*/
+}
+
+#envivo .catalogue .categories{
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	/*border: 1px solid blue;*/
+}
+
+#envivo .catalogue .categories ul.list-categories{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	overflow-x: hidden;
+}
+
+#envivo .catalogue .categories ul.list-categories li.item{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: calc(100% * 2.2);
+	min-width: 250px;
+	border-radius: 5px;	
+	text-align: center;
+	font-weight: 500;
+	opacity: 0.5;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#envivo .catalogue .categories ul.list-categories li.item.active{
+	background-color: rgba(0, 139, 274, 1);
+	opacity: 1;
+}
+
+
+#envivo .catalogue .categories ul.list-categories li.item:focus{
+	/*border: 1px solid white;*/	
+	background-color: white;
+	color: black;
+	opacity: 1;
+}
+
+#envivo .catalogue .channels{
+	position: absolute;
+	width: 100%;
+	left: 0%;
+	height: 80%;
+	top: 20%;
+	bottom: 0;
+	/*border: 1px solid green;*/
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding-top: 10px;
+}
+
+#envivo .catalogue .channels ul{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	/*border: 1px solid white;*/
+}
+
+#envivo .catalogue .channels ul li{
+	position: relative;
+	flex: 0 0 calc(100% / 5);
+	height: 100%;
+}
+
+#envivo .catalogue .channels ul li:focus{
+	border: 5px solid white;
+	border-radius: 2px;
+}
+
+#envivo .catalogue .channels ul li img{
+	position: relative;
+	width: 100%;
+	height: auto;
+	transform: scale(0.95);	
+	transition-property: transform;
+	transition-duration: 400ms;
+	transition-timing-function: ease;
+	transition-delay: 0ms;
+}
+
+#envivo .catalogue .channels ul li:focus img{
+	position: relative;
+	width: 100%;
+	height: auto;
+	transform: scale(1);
+}
+
+#envivo .catalogue .channels ul li .info-channel{
+	margin-top: 10px;
+	text-align: center;
+}
+
+.mt-5{
+	margin-top: 5px;
+}

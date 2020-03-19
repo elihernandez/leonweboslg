@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<title>León Ap. 5:5</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat:400,500,600,700,800|PT+Sans:400,700|Raleway:400,700,800|Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" type="text/css" href="assets/css/boostrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/flexboxgrid.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/loader.css">
+		<link rel="stylesheet" href="assets/css/fluidplayer.min.css" type="text/css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/app.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/menu.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/topmenu.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/envivo.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/alacarta2.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/temporadas.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/videoalacarta.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/radio.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/zonakids.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/errorpage.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/musica.css">
+		<!-- <link rel="stylesheet" type="text/css" href="assets/css/guia.css"> -->
+		<link href="assets/css/video-js.css" rel="stylesheet">
+		<!-- <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet"> -->
+      	<script src="assets/js/dist/fluidplayer.min.js"></script>
+	</head>
+	<body onload="load(30)">
+		<div id="login-view" class="login-view" style="display: none;">
+			<div class="info">
+				<div class="el message">
+					<div class="el logo">
+						<img src="assets/images/logos/leon(BT).png">
+					</div>
+					<div class="el message">
+						<h1>UN ESPACIO<br> DE FE PARA<br> TODOS</h1>
+						<h2>Disfruta en donde quieras,<br>cancela cuando quieras.</h2>
+					</div>
+				</div>
+				<div class="el buttons">
+					<span class="el focusable" onkeypress="showRegisterInfo(event)"><h3>PRUEBA POR 7 DÍAS</h3></span>
+					<span class="el focusable" onkeypress="showLoginForm(event)"><h3>INICIAR SESIÓN</h3></span>
+				</div>
+			</div>
+			<div class="form-login">
+				<div class="info-login">
+					<h3>Inicio de sesión</h3>
+					<h4>Ingresa los datos de tu cuenta</h4>
+				</div>
+				<form>
+				  <div class="form-group">
+				    <label for="exampleInputEmail1"><h4>Ingresa tu email</h4></label>
+				    <input type="email" class="form-control focusable" id="username" aria-describedby="emailHelp">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1"><h4>Ingresa tu contraseña</h4></label>
+				    <input type="password" class="form-control focusable" id="password">
+				  </div>
+				  <button type="button" class="btn btn-primary focusable login">
+				  	<h3>INICIAR SESIÓN</h3>
+				  </button>
+				<h4 class="info-web">¿Necesitas ayuda para iniciar sesión? Visita http://lap55.com</h4>
+				<span class="undo-button focusable">
+					<i class="fa fa-undo"></i>&nbsp;VOLVER
+				</span>
+				</form>
+			</div>
+			<div class="register-info">
+				<div class="el logo">
+					<img src="assets/images/logos/leon(BT).png">
+				</div>
+				<div class="el info-web">
+					<h3>Para registrarte ingresa a: <br>www.lap55.com</h3>
+					<span class="undo-button focusable">
+						<i class="fa fa-undo"></i>&nbsp;VOLVER
+					</span>
+				</div>
+			</div>
+			<div class="carousel">
+			</div>
+			<div class="footer-info">
+				<h4>MÚSICA | TV EN VIVO | PELÍCULAS | CONCIERTOS | CLÍNICAS | SERIES | ZONA KIDS | PPV Y MUCHO MÁS</h4>
+			</div>
+		</div>
+
+		<div id="top-menu" class="" style="display: none;">
+			<div class="logo">
+				<img src="assets/images/logos/leon(BT).png">
+				<!-- <span class="focusable" onfocus="showTopMenu()">
+					<i class="fa fa-cog" aria-hidden="true"></i>
+					<h4>Configuración</h4>
+				</span>
+				<span class="focusable" onfocus="showTopMenu()">
+					<i class="fa fa-sign-out" aria-hidden="true"></i>
+					<h4>Salir de León</h4>
+				</span> -->
+			</div>
+			<div class="botones">
+				<span class="focusable" onfocus="showTopMenu()" onkeydown="hideTopMenu(event)">
+					<i class="fa fa-home" aria-hidden="true"></i>
+					<h4>Inicio</h4>
+				</span>
+				<span class="focusable" onfocus="showTopMenu()" onkeydown="hideTopMenu(event)">
+					<i class="fa fa-television" aria-hidden="true"></i>
+					<h4>En Vivo</h4>
+				</span>
+				<span class="focusable" onfocus="showTopMenu()" onkeydown="hideTopMenu(event)">
+					<i class="fa fa-ticket" aria-hidden="true"></i>
+					<h4>A La Carta</h4>
+				</span>
+				<span class="focusable" onfocus="showTopMenu()" onkeydown="hideTopMenu(event)">
+					<i class="fa fa-podcast" aria-hidden="true"></i>
+					<h4>Radio</h4>
+				</span>
+				<span class="focusable" onfocus="showTopMenu()" onkeydown="hideTopMenu(event)">
+					<i class="fa fa-music" aria-hidden="true"></i>
+					<h4>Música</h4>
+				</span>
+				<span class="focusable" onfocus="showTopMenu()" onkeydown="hideTopMenu(event)">
+					<i class="fa fa-child" aria-hidden="true"></i>
+					<h4>Zona Kids</h4>
+				</span>
+				<span class="focusable" onfocus="showTopMenu()" onkeydown="hideTopMenu(event)">
+					<i class="fa fa-youtube-play" aria-hidden="true"></i>
+					<h4>PPV</h4>
+				</span>
+				<span class="focusable" onfocus="showTopMenu()" onkeydown="hideTopMenu(event)">
+					<i class="fa fa-plus" aria-hidden="true"></i>
+					<h4>Mi lista</h4>
+				</span>
+			</div>
+			<div class="logout">
+				<span class="focusable" onfocus="showTopMenu()" onkeydown="hideTopMenu(event)">
+					<i class="fa fa-cog" aria-hidden="true"></i>
+					<h4>Configuración</h4>
+				</span>
+				<span class="focusable" onfocus="showTopMenu()" onkeydown="hideTopMenu(event)">
+					<i class="fa fa-sign-out" aria-hidden="true"></i>
+					<h4>Salir de León</h4>
+				</span>
+			</div>
+		</div>
+
+		<div id="loader-logo" class="loader-logo" style="display: none;">
+			<div class="logo">
+				<img src="assets/images/logos/leon(BT).png">
+			</div>
+			<div class="spinner">
+				<div class="loadingio-spinner-eclipse-7a5ygusq4ig"><div class="ldio-synoqypex9"><div></div></div></div>
+			</div>
+		</div>
+
+		<div id="loader-spinner" class="loader-spinner" style="display: none;">
+			<div id="spinner" class="col-xs-12 row center-xs spinner">
+				<div class="loadingio-spinner-eclipse-7a5ygusq4ig"><div class="ldio-synoqypex9"><div></div></div></div>
+			</div>
+		</div>
+
+		<div id="app" class="" style="display: none;">
+			<!-- Página de error -->
+				<div id="error-page" class="error-page" style="display: none;">
+					<div class="info">
+						<h2>OOPS!</h2>
+						<h3>Ocurrió un problema,<br>no se pudo obtener la información.</h3>
+						<button type="button" name="back-menu" class="button-back-menu">VOLVER AL MENÚ</button>
+					</div>
+					<div class="loader">
+						<img src="assets/images/logos/leon(BT).png">
+					</div>
+				</div>
+
+			<!-- Loader con logo -->
+				<!-- <div id="loader-logo" style="display: none;">
+					<div class="loader row">
+						<div class="col-xs-12 row center-xs logo">
+							<img src="assets/images/logos/leon(BT).png">
+						</div>
+					</div>
+					<div id="spinner" class="col-xs-12 row center-xs spinner">
+						<div class="loadingio-spinner-eclipse-7a5ygusq4ig"><div class="ldio-synoqypex9"><div></div></div></div>
+					</div>
+				</div> -->
+
+			<!-- Loader, solo spinner -->
+				<!-- <div id="loader-spinner" style="display: none">
+					<div id="spinner" class="col-xs-12 row center-xs spinner">
+						<div class="loadingio-spinner-eclipse-7a5ygusq4ig"><div class="ldio-synoqypex9"><div></div></div></div>
+					</div>
+				</div> -->
+
+			<!-- Menú principal -->
+
+				<div id="menu-principal" style="display: none;">
+					<span id="demo1" style="color: white;"></span>
+
+					<!-- <div id="infoweb">
+					 	<div class="row center-xs middle-xs">
+					 		<div class="col-xs">
+					 			<h2 class="text-web">www.lap55.com</h2>
+					 		</div>
+					 	</div>
+					</div> -->
+				</div>
+
+			<!-- Sección En Vivo -->
+				<div id="envivo" style="display: none">
+					<!-- <div id="header">
+						<div class="header row between-xs">
+							<div class="col-xs row middle-xs item logo">
+								<img src="assets/images/logos/leon(BT).png">
+							</div>
+							<div class="col-xs row middle-xs end-xs item hora">
+								<h2 id="reloj">16:27</h2>
+							</div>
+						</div>
+					</div>
+					 -->
+					<!-- <div id="video">
+						<video id="myVideo" controls></video>
+					</div> -->
+
+					<input type="hidden" id="moverArriba" value="0">
+					<input type="hidden" id="moverAbajo" value="0">
+					<input type="hidden" id="moverDerecha" value="0">
+					<input type="hidden" id="moverIzquierda" value="0">
+
+					<!-- <div id="infoCanal" class="infoCanal ocultarInfo row middle-xs between-xs">
+						<div class="col-xs-3 item">
+							<img id="posterCanal" src="http://canal.lap55.com/media/portadas/leontv.png">
+						</div>
+						<div class="col-xs row middle-xs center-xs item">
+							<div class="col-xs informacion-canal">
+								<h3 id="nombreCanal">Informativo</h3>
+								<h4 id="infoCanal">Canal informativo</h4>
+							</div>
+						</div>
+					</div> -->
+
+					<div id="catalogo-envivo" class="catalogo">
+						<input type="number" class="contCatalogo" name="contCatalogo" id="contCatalogo" value="0" style="display: none">
+					</div>
+
+					<div class="catalogue">
+						<div class="categories">
+							<ul class="list-categories">
+								<li class="item focusable active" tabindex="-1">Eventos en Vivo</li>
+								<li class="item focusable" tabindex="-1">Canales de Tv</li>
+								<li class="item focusable" tabindex="-1">Drama</li>
+								<li class="item focusable" tabindex="-1">Comedia</li>
+								<li class="item focusable" tabindex="-1">Documentales</li>
+								<li class="item focusable" tabindex="-1">Sanidad</li>
+								<li class="item focusable" tabindex="-1">Liberación</li>
+								<li class="item focusable" tabindex="-1">Restauración</li>
+							</ul>
+						</div>
+						<div class="channels">
+							<ul class="list-channels">
+								<li class="item focusable" tabindex="-1">
+									<img src="http://canal.lap55.com/media/portadas/leontv.png">
+									<div class="info-channel">
+										<h2>Informativo</h2>
+										<h3 class="mt-5">Informativo León</h3>
+									</div>
+								</li>
+								<li class="item focusable" tabindex="-1">
+									<img src="http://canal.lap55.com/media/portadas/alientovision.png">
+									<div class="info-channel">
+										<h2>Aliento Visión</h2>
+										<h3 class="mt-5">Vida en vida</h3>
+									</div>
+								</li>
+								<li class="item focusable" tabindex="-1">
+									<img src="http://canal.lap55.com/media/portadas/cielotv.png">
+									<div class="info-channel">
+										<h2>Cielo TV</h2>
+										<h3 class="mt-5">Cielo TV</h3>
+									</div>
+								</li>
+								<li class="item focusable" tabindex="-1">
+									<img src="http://canal.lap55.com/media/portadas/rtv.png">
+									<div class="info-channel">
+										<h2>RTV</h2>
+										<h3 class="mt-5">RTV</h3>
+									</div>
+								</li>
+								<li class="item focusable" tabindex="-1">
+									<img src="http://canal.lap55.com/media/portadas/leontv.png">
+									<div class="info-channel">
+										<h2>Informativo</h2>
+										<h3 class="mt-5">Informativo León</h3>
+									</div>
+								</li>
+								<li class="item focusable" tabindex="-1">
+									<img src="http://canal.lap55.com/media/portadas/alientovision.png">
+									<div class="info-channel">
+										<h2>Aliento Visión</h2>
+										<h3 class="mt-5">Vida en vida</h3>
+									</div>
+								</li>
+								<li class="item focusable" tabindex="-1">
+									<img src="http://canal.lap55.com/media/portadas/cielotv.png">
+									<div class="info-channel">
+										<h2>Cielo TV</h2>
+										<h3 class="mt-5">Cielo TV</h3>
+									</div>
+								</li>
+								<li class="item focusable" tabindex="-1">
+									<img src="http://canal.lap55.com/media/portadas/rtv.png">
+									<div class="info-channel">
+										<h2>RTV</h2>
+										<h3 class="mt-5">RTV</h3>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			<!-- Sección A la Carta -->
+				<div id="alacarta" style="display: none;">
+					<img class="background-movie" src="">
+					<div id="background">
+						<!-- <div class="left-info">
+							
+								<img class="logo" src="assets/images/logos/leon_fondo_oscuro.png">
+					
+							<div class="menu">
+								<span>
+									<i class="fa fa-ticket" aria-hidden="true"></i>
+									<h3>A la carta</h3>
+								</span>
+							</div>
+						</div>
+						<div class="right-info">
+							<div class="icons">
+								<span><i class="fa fa-search" aria-hidden="true"></i></span>
+								<span><i class="fa fa-align-right" aria-hidden="true"></i></span>
+							</div>
+						</div> -->
+						<div class="info-movie">
+							<div class="info-1">
+								<div class="el">
+									<img src="assets/images/logos/imdb.png" style="height: 40px">
+									<h3 class="ml-15 rating-movie" style="font-size: 35px; font-weight: 700;"></h3>
+									<h3 class="ml-15" style="font-size: 30px;">|</h3>
+									<img src="" class="ml-25 clasification-movie" style="height: 40px">
+								</div>
+								<div class="el">
+									<i class="fa fa-clock-o" aria-hidden="true" style="font-size: 24px;"></i>
+									<h3 class="duration-movie"></h3>
+									<h3 class="date-movie"></h3>
+								</div>
+							</div>
+							<h3 class="title-movie"></h3>
+							<div class="text-group">
+								<h3 style="font-weight: 700">Género: </h3>
+								<h3 class="categories-movie"></h3>
+							</div>
+							<div class="text-group">
+								<h3 style="font-weight: 700">Actores: </h3>
+								<h3 class="actors-movie"></h3>
+							</div>
+							<div class="text-group">
+								<h3 style="font-weight: 700">Director: </h3>
+								<h3 class="director-movie"></h3>
+							</div>
+							<div class="text-description">
+								<h3 style="font-weight: 700">Sinópsis: </h3>
+								<div class="description-movie">
+								</div>
+							</div>
+							<!-- <div class="group-info" style="margin-top: 5px;">
+								<div class="el duration-movie-group">
+									<i class="fa fa-clock-o" aria-hidden="true" style="font-size: 24px;"></i>
+									<h3 id="duracion" style="margin-left: 10px;"></h3>
+								</div>
+								
+							</div> -->
+							<!-- <div class="group-info" style="margin-top: 5px">
+								
+							</div>
+							<div class="group-info" style="margin-top: 5px">
+								
+							</div> -->
+							
+						</div>
+					</div>
+					<div class="rectangle-movie">
+					</div>
+					<div id="catalogo-alacarta" class="">
+					</div>
+					<!-- <video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268">
+					    <source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL">
+					  </video-js> -->
+				</div>
+
+			<!-- Video A la Carta -->	
+				<div id="video-alacarta" style="display: none;">
+					<!-- <video id="pruebahls" class="video-js vjs-big-play-centered" controls></video> -->
+					<video id="pruebahls" src="" type="">
+						<source id="source-video" src="" type="application/x-mpegURL">
+						<!-- <source id="source-video"> -->
+					</video>
+					<div class="progress-video">
+					  <div class="skills html">90%</div>
+					</div>
+					<div class="info-movie-alacarta">
+						<div id="controles-video-alacarta" class="controles">
+							<span id="button-backward" class="control-video button-backward" onkeydown="stepBackward(event)" data-sn-up="#pruebahls_vast_control_currentpos" data-sn-left="#button-backward" tabindex="-1">
+								<i class="fa fa-backward" aria-hidden="true"></i>
+							</span>
+							<span id="button-playpause" class="control-video playpause" onkeydown="playPause(event)" data-sn-up="#pruebahls_vast_control_currentpos" onkeydown="keyPressedVideo()"  tabindex="-1">
+								<i id="icon-playpause" class="fa fa-pause" aria-hidden="true"></i>
+							</span>
+							<span id="button-forward" class="control-video button-forward" onkeydown="stepForward(event)" data-sn-up="#pruebahls_vast_control_currentpos"  tabindex="-1">
+								<i class="fa fa-forward" aria-hidden="true"></i>
+							</span>
+							<span id="button-subtitles" class="control-video subtitles" onkeydown="" data-sn-up="#pruebahls_vast_control_currentpos" data-sn-right="button-subtitles"  tabindex="-1">
+								<i class="fa fa-list-alt subtitles" aria-hidden="true"></i>
+							</span>
+						</div>
+						<div id="time-movie" class="time-movie">
+							<div>
+								<h3 id="initialTime"></h3>
+							</div>
+							<div>
+								<h3 id="finalTime"></h3>
+							</div>
+						</div>
+						<div id="poster-movie" class="poster-movie">
+							<img id="poster-movie-alacarta" class="portrait" src="">
+						</div>
+						<div id="title-movie" class="title-movie">
+							<h2 id="title-movie-alacarta" class="title"></h2>
+						</div>
+					</div>
+				</div>
+
+			<!-- Sección Temporadas -->
+				<div id="temporadas" style="display: none;">
+					<div id="header-temporadas" class="header-temporadas">
+						
+					</div>
+					<div id="barra-lateral" class="barra-lateral">
+						<!-- <div class="focusable item">
+							<h2 class="titulo-temporada">Triunfaras</h2>
+						</div> -->
+					</div>
+					<div id="contenido-temporadas" class="contenido-temporadas">
+						<div id="spinner-temporadas" class="spinner" style="display: none;">
+							<div class="loadingio-spinner-eclipse-7a5ygusq4ig"><div class="ldio-synoqypex9"><div></div></div></div>
+						</div>
+						<!-- <div class="focusable item">
+							<img class="" src="http://canal.lap55.com/media/portadas/MarcosWittconversaconSamo.jpg">
+							<h2 class="titulo">2. Marcos Witt conversa con Kalimba</h2>
+							<h3 class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+						</div> -->
+					</div>
+				</div>
+
+			<!-- Sección Radio -->
+				<div id="radio" style="display: none;">
+					<section class="left-menu">
+						<div class="logo">
+							<img src="assets/images/logos/leon_fondo_oscuro.png">
+						</div>
+						<div class="menu">
+							<div>
+								<h3>GÉNERO</h3>
+								<span>MÚSICA 24/7</span>
+							</div>
+							<div>
+								<h3>PAÍS</h3>
+								<span>USA-ESPAÑOL</span>
+							</div>
+							<span class="find-button focusable view-1" tabindex="-1">BUSCAR</span>
+						</div>
+						<div class="player">
+							<img src="assets/images/fondos/zonakids.jpg">
+							<div class="info-song">
+								<h3>En vivo</h3>
+							</div>
+							<h4 class="time-current">1:20</h4>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+									<span class="sr-only">70% Complete</span>
+								</div>
+							</div> 
+							<i class="fa fa-volume-up" aria-hidden="true"></i>
+						</div>
+					</section>
+					<section class="content">
+						<div class="title-catalogue">
+							<h3>RADIO</h3><span class="circle"></span><h3><b>EN VIVO</b></h3>
+						</div>
+						<div class="catalogue">
+							<ul>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Celestial</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Esperanza</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">RCG</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">LZM</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Maranatha</span>
+								</li>
+							</ul>
+							<ul>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">DCN</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">RoKa</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">LUZ</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Bendición</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Vértical</span>
+								</li>
+							</ul>
+							<ul>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Manantial</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Black Gospel</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Raúl Haro</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Triunfo</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Vida</span>
+								</li>
+							</ul>
+							<ul>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Tecer Cielo</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Marcos Witt</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Marco Barrientos</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Año Cero</span>
+								</li>
+								<li class="focusable view-1" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Alex Zurdo</span>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+
+				<div id="radio-view-2" style="display: none;">
+					<section class="info-left">
+						<div class="info-up">
+							<img class="img1" src="assets/images/fondos/ondamusica.png">
+							<img class="img2" src="assets/images/fondos/radiocelestial.png">
+						</div>
+						<div class="info-down">
+							<span><i class="fa fa-play-circle" aria-hidden="true"></i></span>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" aria-valuenow="70"
+							  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
+							    	<span class="sr-only">70% Complete</span>
+							  	</div>
+							</div> 
+							<div class="options">
+								<span><i class="fa fa-random" aria-hidden="true"></i></span>
+								<span><i class="fa fa-refresh" aria-hidden="true"></i></span>
+								<span><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+								<span><i class="fa fa-align-justify" aria-hidden="true"></i></span>
+							</div>
+							<h3 class="hour">12:30</h3>
+							<h3 class="date">26|08|2020</h3>
+						</div>
+					</section>
+					<section class="info-right">
+						<div class="categorie">
+							<span class="circle"></span>
+							<h3>EN VIVO</h3>
+						</div>
+						<div class="guide-radio">
+							<ul>
+								<li>
+									<h3 class="hour">12:30</h3>
+									<h3 class="title">Una vida con propósito</h3>
+								</li>
+								<li>
+									<h3 class="hour">13:40</h3>
+									<h3 class="title">Tomando el control</h3>
+								</li>
+							</ul>
+						</div>
+						<div class="cover-radio">
+							<img src="assets/images/fondos/radioesperanza.jpg">
+						</div>
+						<div class="social-media">
+							<div>
+								<img class="codigo" src="assets/images/fondos/codigoqr.jpg">
+								<h3>WhatsApp</h3>
+							</div>
+							<div>
+								<img class="codigo" src="assets/images/fondos/codigoqr.jpg">
+								<h3>Facebook</h3>
+							</div>
+							<div>
+								<img class="codigo" src="assets/images/fondos/codigoqr.jpg">
+								<h3>Twitter</h3>
+							</div>
+						</div>
+					</section>
+				</div>
+
+			<!-- Seccion Música -->	
+				<div id="musica" style="display: none;">
+					<section class="left-menu">
+						<div class="logo">
+							<img src="assets/images/logos/Leon Icono (BT).png">
+						</div>
+						<div class="menu">
+							<ul>
+								<li class="focusable section-music" tabindex="-1">ESTRENOS</li>
+								<li class="focusable section-music" tabindex="-1">RECOMENDADO</li>
+								<li class="focusable section-music" tabindex="-1">MY PLAYLIST</li>
+								<li class="focusable section-music" tabindex="-1">GÉNERO</li>
+								<li class="focusable section-music" tabindex="-1">BUSCAR</li>
+								<li class="focusable section-music" tabindex="-1">ALBÚM + SONADO</li>
+							</ul>
+						</div>
+						<div class="player">
+							<img src="assets/images/fondos/zonakids.jpg">
+							<div class="info-song">
+								<h3>Primero</h3>
+								<h4>Tercer Cielo</h4>
+							</div>
+							<div class="time-song">
+								<h4 class="time-current">1:20</h4>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="sr-only">70% Complete</span>
+									</div>
+								</div> 
+								<h4 class="total-time">3:45</h4>
+							</div>
+							<i class="fa fa-pause-circle-o" aria-hidden="true"></i>
+						</div>
+					</section>
+					<section class="content">
+						<h3 class="title-catalogue">ESTRENOS</h3>
+						<div class="catalogue">
+							<ul>
+								<li class="focusable section-music" tabindex="-1" onkeypress="keyPressedArtist(event)">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Tecer Cielo</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Marcos Witt</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Marco Barrientos</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Año Cero</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Alex Zurdo</span>
+								</li>
+							</ul>
+							<ul>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Rojo</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">DJ PV</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Niko</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Alex Campos</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Eliezer Boyer</span>
+								</li>
+							</ul>
+							<ul>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Ronnie & Amy</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Janleidy Batista</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Raúl Haro</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Barak</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Jaci Velásquez</span>
+								</li>
+							</ul>
+							<ul>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Tecer Cielo</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Marcos Witt</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Marco Barrientos</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Año Cero</span>
+								</li>
+								<li class="focusable section-music" tabindex="-1">
+									<img src="assets/images/fondos/zonakids.jpg">
+									<span class="title-artist">Alex Zurdo</span>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+		
+			<!-- Sección Zona Kids -->
+				<div id="zonakids" style="display: none;">
+					<div class="background">
+						<div class="logo">
+							<img src="assets/images/logos/Leon Icono (BT).png">
+						</div>
+						<div class="info">
+							<h2 class="title-categoria" style="font-weight: 400;"></h2>
+							<div class="group-info">
+								<h3 class="subtitulo"></h3>
+								<img src="assets/images/logos/imdb.png" class="el" style="height: 39.1px">
+								<h3 class="ml-15 rating-movie" style="font-size: 30px; font-weight: 700;"></h3>
+								<h3 class="ml-15" style="font-size: 30px;">|</h3>
+								<img src="assets/images/logos/PG13.png" class="ml-25 clasification-movie" style="height: 39.1px">
+							</div>
+							<div class="group-info" style="margin-top: 5px;">
+								<h3 class="categories" style="font-weight:  500;"></h3>
+								<div class="el duration-movie-group">
+									<i class="fa fa-clock-o" aria-hidden="true" style="font-size: 24px;"></i>
+									<h3 class="duration" style="margin-left: 10px;"></h3>
+								</div>
+								<h3 class="el date-movie"></h3>
+							</div>
+							<div class="group-info" style="margin-top: 5px">
+								<h3 class="director"></h3>
+							</div>
+							<div class="group-info" style="margin-top: 5px">
+								<h3 class="actors"></h3>
+							</div>
+							<div id="titulos-description" class="description" style="margin-top: 15px;">
+							</div>
+						</div>
+					</div>
+					<div class="info-pelicula">
+						<img class="background-pelicula" src="">
+					</div>
+					<div class="rectangle-movie-zonakids">
+					</div>
+					<div id="catalogo-zonakids" class="">
+					</div>
+				</div>
+		</div>
+
+		<script src="assets/js/dist/crypto.js"></script>
+		<script type="text/javascript" src="webOSTVjs-1.1.0/webOSTV.js"></script>
+		<script type="text/javascript" src="webOSTVjs-1.1.0/webOSTV-dev.js"></script>
+		<script src="assets/js/dist/jquery.min.js"></script>
+		<script src="assets/js/dist/jquery.knob.js"></script>
+		<script src="assets/js/dist/bootstrap.min.js"></script>
+		<!-- <script src="assets/js/dist/axios.min.js"></script> -->
+		<script src="assets/js/dist/spatial_navigation.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script> -->
+		<!-- <script src="assets/js/dist/vue.js"></script> -->
+		<!-- <script src="assets/js/vue.js"></script> -->
+		<script src="assets/js/dist/bcrypt.js"></script>
+		<script src="assets/js/video.js"></script>
+		<script src="assets/js/envivo.js"></script>
+		<script src="assets/js/alacarta.js"></script>
+		<script src="assets/js/radio.js"></script>
+		<script src="assets/js/musica.js"></script>
+		<script src="assets/js/zonakids.js"></script>
+		<script src="assets/js/menu.js"></script>
+		<script src="assets/js/login.js"></script>
+		<script src="assets/js/app.js"></script>
+		<!-- <script src="assets/js/envivo.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+		<script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
+		<script src="https://unpkg.com/video.js/dist/video.js"></script>
+  		<script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
+      	<script src="assets/js/dist/require.js"></script>
+	</body>
+
+

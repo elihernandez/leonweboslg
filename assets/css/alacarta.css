@@ -1,0 +1,516 @@
+/*Estilos de A la Carta*/
+
+	#alacarta {
+		/*position: absolute;
+		height: 100%;
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: hidden;*/
+		
+	}
+
+	#alacarta #background {
+		z-index: 2;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-image: url('../images/fondos/alacarta2.png');
+	}
+
+	#alacarta #background .logo {
+		margin-top: 1%;
+		padding-left: calc(1% + 5px);
+		width: 10%;
+		height: 15%;
+		position: absolute;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+
+	#alacarta #background .logo img {
+		width: 100%;
+		height: auto;
+		position: relative;
+		/*border: 1px solid red;*/
+	}
+
+	#alacarta #background .info {
+		position: absolute;
+		width: 92%;
+		height: 49%;
+		margin-left: 10%;
+		margin-top: 1%;
+		color: white;
+	}
+
+	#alacarta #background .info .group-info {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		align-content: center;
+	}
+
+	.ml-15 {
+		margin-left: 15px;
+	}
+
+	 .ml-25 {
+		margin-left: 25px;
+	}
+
+	#alacarta #background .info .group-info .el {
+		margin-left: 40px;
+	}
+
+	#alacarta #background .info .group-info .duration-movie-group {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-content: center;
+		align-items: center;
+	}
+
+	#alacarta #background .info .categoria {
+		font-weight: 400;
+		/*border: 1px solid green;*/
+	}
+
+	#alacarta #background .info .subtitulo {
+		font-size: 39.1px;
+		font-weight: 700;
+	}
+
+	#alacarta #background .info .description {
+		width: 80%;
+		height: 80%;
+		font-weight: 500;
+		font-size: 31px;
+		line-height: 32px;
+		margin-left: calc(-9% + 5px);
+	}
+
+	#alacarta #background .info .info-rating {
+		position: absolute;
+		height: 10%;
+		left: 70%;
+		right: 0;
+		top: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+
+	#alacarta #background .info .info-rating img {
+		position: relative;
+		height: 100%;
+		width: auto;
+	}
+
+	#alacarta #background .info .info-adicional {
+		position: absolute;
+		width: 12%;
+		left: 75%;
+		height: 180px;
+		top: 55%;
+		border: 1px solid yellow;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+		overflow-x: hidden;
+	}
+
+	#alacarta #background .info .info-adicional .left {
+		margin-right: 15px;
+	}
+
+	#alacarta #background .info .info-adicional .right {
+		margin-left: 15px;
+	}
+
+	
+	#alacarta #background .info .info-adicional .imdb {
+		position: absolute;
+		width: 100%;
+		height: 80px;
+		border: 1px solid white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+	}	
+
+	#alacarta #background .info .info-adicional .imdb img {
+		position: relative;
+		width: auto;
+		height: 50%;
+	}
+
+	#alacarta #background .info .info-adicional .imdb-add {
+		position: absolute;
+		width: 100%;
+		height: 80px;
+		border: 1px solid white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+	}	
+
+	#alacarta #background .info .info-adicional .imdb-add img {
+		position: relative;
+		width: auto;
+		height: 50%;
+	}
+
+		#alacarta #background .info .info-adicional .imdb-add .rate-imdb {
+		position: relative;
+		border: 1px solid white;
+		width: 80px;
+		text-align: center;
+		font-size: 26px;
+	}	
+	
+
+	#alacarta #background .info .info-adicional #categories {
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		width: 100%;
+		top: 80px;
+		height: 34px;
+		text-align: center;
+		border: 1px solid blue;
+	}
+
+	#alacarta #background .info .info-adicional .director-info {
+		position: absolute;
+		width: 100%;
+		top: 114px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-content: center;
+		align-items: center;
+	}
+
+	#alacarta #background .info .info-adicional .actor-info {
+		position: absolute;
+		width: 100%;
+		top: 148px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+
+	#alacarta #background .info .info-adicional .date-duration-movie {
+		position: absolute;
+		width: 100%;
+		top: 182px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+
+		#alacarta #background .info .info-adicional .duration-movie {
+		position: absolute;
+		width: 100%;
+		top: 216px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+
+	#alacarta #info-pelicula{
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+
+	#alacarta #info-pelicula #background-pelicula {
+		left: 25%;
+		width: 75%;
+		height: 85%;
+		position: absolute;
+	}
+
+/*Estilos de A la Carta*/
+
+/*Estilos del header*/
+
+
+/*Estilos del header*/
+
+/*Estilos del video*/
+
+	#catalogo-alacarta #video {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+	}
+
+	#catalogo-alacarta #video video{
+		position:absolute;
+		height: 100%;
+		width: 100%;
+		top:0px;
+		left:0px;
+	}
+
+/*Estilos de video*/
+
+	.rectangle-movie{
+		z-index: 3;
+		position: absolute;
+		width: 230px;
+		height: 340px;	
+		outline: solid 5px white;
+		/*margin-left: 158.75px;*/
+		margin-left: calc(2% + 5px);
+		top: calc(50% + 48px);
+		transition-property: width, height;
+	  	transition-duration: 0ms;
+	  	transition-timing-function: linear;
+	  	transition-delay: 0ms;
+	}
+
+	.rectangle-movie.portrait{
+		width: 230px;
+		height: 340px;	
+	}
+
+	.rectangle-movie.landscape{
+		width: 350px;
+		height: 220px;		
+	}
+
+/*Info de Canal*/
+
+	#catalogo-alacarta #infoCanal.ocultarInfo {
+		top: 100%;
+	}
+
+	#catalogo-alacarta #infoCanal .item {
+		/*border: 2px solid red;*/
+	}
+
+	#catalogo-alacarta #infoCanal img {
+		position: relative;
+		width: 100%;
+		height: auto;	
+	}
+
+	#catalogo-alacarta #infoCanal .informacion-canal h3 {
+		margin: 10px 0px;
+	}
+
+	#catalogo-alacarta #infoCanal .informacion-canal h4 {
+		margin: 10px 0px;
+		font-weight: 400;
+	}
+/*Info de Canal*/
+
+/*Estilos de la guia*/
+	#catalogo-alacarta {
+		z-index: 2;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		height: 100%;
+		padding-left: 2%;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		background-color: transparent;
+		transition-property: top;
+	  	transition-duration: 600ms;
+	  	transition-timing-function: ease-in-out;
+	  	transition-delay: 100ms;
+	  	background: linear-gradient(180deg, transparent, 30%, black);
+	}
+
+	#catalogo-alacarta.ocultarCatalogo {
+		top: 100%;
+	}
+
+	#catalogo-alacarta.displayCatalogo {
+		display: none;
+	}
+
+	#catalogo-alacarta .container {
+		width: 100%;
+		height: 423px;
+		padding: 0px 0px;
+		padding-bottom: 30px;
+		/*border: 1px solid green;*/
+		transition-property: transform;
+	  	transition-duration: 225ms;
+	  	transition-timing-function: linear;
+	  	transition-delay: 0ms;
+	}
+
+	#catalogo-alacarta .container .header {
+		margin: 0px 0px;
+		padding: 5px 10px;
+		width: 100%;
+		color: white;
+		background-color: transparent;
+	}
+
+	#catalogo-alacarta .container:focus-within > .header {
+		opacity: 0.9;
+	}
+
+	#catalogo-alacarta .container .header .posicion-contador{
+		margin-right: 5px;
+		font-size: 24px;
+	}
+
+	#catalogo-alacarta .container .header .texto-contador{
+		font-size: 24px;
+	}
+
+	#catalogo-alacarta .container .header .total-contador{
+		margin-left: 5px;
+		font-size: 24px;
+	}
+
+	/* LISTA PORTRAIT */
+	#catalogo-alacarta .container .lista {
+		width: 100%;
+	  	display: flex;
+	  	padding: 0px 0px;
+	  	margin: 0px 0px;
+	}
+
+	#catalogo-alacarta .container .lista .item {
+	  	padding: 0px 0px;
+	  	background: transparent;
+	  	flex: 0 0 230px;
+	  	text-align: center;
+	  	margin: 5px 5px;
+	  	transition-property: transform, background;
+	  	transition-duration: 225ms;
+	  	transition-timing-function: linear;
+	  	transition-delay: 0ms;
+	  	color: white;
+	  	opacity: 0.6;
+	  	display: flex;
+	  	flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+
+	#catalogo-alacarta .container .lista .item:focus  {
+		/*outline: solid 5px white;*/
+		opacity: 0.9;
+	}
+
+	#catalogo-alacarta .container .lista .item:focus img  {
+		transform: scale(1);
+	}
+
+	#catalogo-alacarta .container .lista .item img {
+		position: relative;
+		width: 230px;
+		height: 345px;	
+		transform: scale(1);	
+		transition-property: transform;
+		transition-duration: 400ms;
+		transition-timing-function: ease;
+		transition-delay: 0ms;
+	}
+
+	#catalogo-alacarta .container .lista .item h3 {
+		margin: 10px 0px;
+	}
+
+	#catalogo-alacarta .container .lista .item h4 {
+		margin: 10px 0px;
+		font-weight: 400;
+	}
+
+	/******** LISTA LANDSCAPE *********/
+	#catalogo-alacarta .landscape {
+		width: 100%;
+		height: 303px;
+		/*height: 398px;*/
+		padding: 0px 0px;
+		padding-bottom: 30px;
+		/*border: 1px solid green;*/
+		transition-property: transform;
+	  	transition-duration: 225ms;
+	  	transition-timing-function: linear;
+	  	transition-delay: 0ms;
+	}
+
+
+	#catalogo-alacarta .container .lista-landscape {
+		width: 100%;
+	  	display: flex;
+	  	padding: 0px 0px;
+	  	margin: 0px 0px;
+	}
+
+	#catalogo-alacarta .container .lista-landscape .item {
+	  padding: 0px 0px;
+	  background: transparent;
+	  flex: 0 0 350px;
+	  text-align: center;
+	  margin: 5px 5px;
+	  transition-property: transform, background;
+	  transition-duration: 200ms;
+	  transition-timing-function: linear;
+	  transition-delay: 0ms;
+	  color: white;
+	  opacity: 0.6;
+	}
+
+	#catalogo-alacarta .container .lista-landscape .item:focus  {
+		/*outline: solid 5px white;*/
+		opacity: 0.9;
+	}
+
+	#catalogo-alacarta .container .lista-landscape .item:focus img  {
+		transform: scale(1);
+	}
+
+	#catalogo-alacarta .container .lista-landscape .item img {
+		position: relative;
+		width: 350px;
+		height: 220px;	
+		transform: scale(1);	
+		transition-property: transform;
+		transition-duration: 400ms;
+		transition-timing-function: ease;
+		transition-delay: 0ms;
+	}
+
+	#catalogo-alacarta .container .lista-landscape .item h3 {
+		margin: 10px 0px;
+	}
+
+	#catalogo-alacarta .container .lista-landscape .item h4 {
+		margin: 10px 0px;
+		font-weight: 400;
+	}
+
+
+

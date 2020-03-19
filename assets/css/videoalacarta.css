@@ -1,0 +1,295 @@
+#video-alacarta {
+	/*position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	border: 1px solid red;*/
+}
+
+#video-alacarta video{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+}
+
+#video-alacarta .fluid_video_wrapper {
+	position: inherit;
+}
+
+
+@media only screen and (min-device-width: 375px) {
+ .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_fluid_control_duration {
+  left:105px
+ }
+ .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container.no_volume_bar .fluid_fluid_control_duration {
+  left:32px
+ }
+ .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_right .fluid_control_volume_container {
+ 	display: none;
+ }
+}
+
+/* Contenedor de todos los controles */
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container{
+	left: 0%;
+	height: 100%;
+	top: 75%;
+	background: rgba(0,0,0,0.3);
+}
+
+/* Contenedor de la barra */
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_progress_container{
+	width: 75%;
+	left: 21%;
+	right: 0;
+	top: 10%;
+}
+
+/* Barra de progreso completa */
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_progress_container .fluid_controls_progress, .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_progress_container .fluid_controls_progress .fluid_controls_currentprogress{
+	height: 7px;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.50);
+}
+
+/* Barra de progreso procesada */
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_progress_container .fluid_controls_progress, .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_progress_container .fluid_controls_progress .fluid_controls_currentprogress{
+	height: 7px;
+	border-radius: 10px;
+}
+
+/* Barra de progreso en buffer */
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_progress_container .fluid_controls_buffered{
+	height: 7px;
+	border-radius: 10px;
+}
+
+/* Indicador de progreso */
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_progress_container .fluid_controls_progress .fluid_controls_currentpos{
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+}
+
+/* Indicador de progreso */
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_progress_container .fluid_controls_progress .fluid_controls_currentpos:active{
+	border: 2px solid red;
+}
+
+#pruebahls_fluid_controls_progress_container{
+	transition-property: opacity;
+	transition-duration: 200ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	opacity: 1;
+}
+
+#pruebahls_fluid_controls_progress_container.desvanecer{
+	opacity: 0;
+}
+
+.pruebahls_fluid_controls_container{
+	transition-property: opacity, visibility;
+	transition-duration: 200ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	opacity: 1;
+}
+
+#pruebahls_fluid_controls_container.desvanecer{
+	opacity: 0;
+}
+
+.info-movie-alacarta{
+	transition-property: opacity;
+	transition-duration: 200ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	opacity: 1;
+}
+
+.info-movie-alacarta.desvanecer{
+	opacity: 0;
+}
+
+
+#pruebahls_vast_control_currentpos{
+	transition-property: transform;
+	transition-duration: 180ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	transform: scale(0.6);
+	width: 20px;
+	height: 20px;
+	border-radius: 11px;
+}
+
+#pruebahls_vast_control_currentpos:focus{
+	background-color: white;
+	/*width: 17px;
+	height: 17px;
+	border-radius: 11px;*/
+	transform: scale(1);
+	opacity: 1;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_progress_container .fluid_controls_progress .fluid_controls_currentpos{
+	top: -6px;
+}
+
+/* Controles de la izquierda "Boton de play" */
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_controls_left{
+	width: 24px;
+	left: 20px;
+}
+
+/* Timer de pelicula */
+.fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_fluid_control_duration{
+	display: none;
+}
+
+#controles-video-alacarta {	
+	z-index: 2;
+	position: absolute;
+	width: 75%;
+	left: 21%;
+	top: 88%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: white;
+	transition-property: top;
+	transition-duration: 400ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	opacity: 1;
+	/*border: 1px solid red;*/
+}
+
+#controles-video-alacarta span {
+	text-align: center;
+	min-width: 60px;
+	min-height: 60px;
+	scale: 0.9;
+	transition-property: transform;
+	transition-duration: 180ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	transform: scale(0.8);
+	opacity: 0.6;
+	font-weight: 700;	
+	/*border: 2px solid white;*/
+	border-radius: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#controles-video-alacarta span:hover {
+	transform: scale(1);
+	text-shadow: 0 0 30px #fff;
+	background-color: white;
+	color: black;
+	opacity: 1;
+	cursor: pointer;
+}
+
+#controles-video-alacarta span:focus {
+	transform: scale(1);
+	text-shadow: 0 0 30px #fff;
+	background-color: white;
+	color: black;
+	opacity: 1;
+}
+
+#controles-video-alacarta span i {
+	font-size: 25px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-width: 25px;
+}
+
+#controles-video-alacarta span.subtitles {
+	margin-left: 30px;
+}
+
+#time-movie {	
+	z-index: 2;
+	position: absolute;
+	left: 21%;
+	width: 75%;
+	top: 88%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: white;
+	transition-property: top;
+	transition-duration: 400ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	opacity: 1;
+	/*border: 1px solid red;*/
+}
+
+#time-movie h3{
+	font-weight: 600;
+}
+
+#poster-movie{
+	position: absolute;
+	z-index: 2;
+	height: 25%;
+	width: 20%;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+#poster-movie img.portrait{
+	padding-top: 10px;
+	padding-bottom: 10px; 
+	z-index: 2;
+	position: relative;
+	width: auto;
+	height: 100%;
+}
+
+#poster-movie img.landscape{
+	padding-top: 10px;
+	padding-bottom: 10px; 
+	z-index: 2;
+	position: relative;
+	width: 100;
+	height: auto;
+}
+
+#title-movie {	
+	z-index: 2;
+	position: absolute;
+	left: 21%;
+	width: 75%;
+	top: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: white;
+	transition-property: top;
+	transition-duration: 400ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0ms;
+	opacity: 1;
+	/*border: 1px solid red;*/
+}
+
+#title-movie h2{
+	font-weight: 600;
+	font-size: 35px;
+}

@@ -1,0 +1,52 @@
+.error-page{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+.error-page .loader img{
+	width: 100%;
+	height: auto;
+}
+
+.error-page .info{
+	margin-top: 50px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.error-page .info h2{
+	font-size: 230px;
+	font-weight: 900;
+}
+
+.error-page .info h3{
+	text-align: center;
+	font-size: 45px;
+	font-weight: 700;
+}
+
+.error-page .info button{
+	margin-top: 40px;
+	font-weight: 700;
+	font-size: 35px;
+	height: 80px;
+	min-width: 400px;
+	background-color: transparent;
+	border-radius: 5px;
+}
+
+.error-page .info button:focus{
+	background-color: white;
+	border: none;
+	color: black;
+}

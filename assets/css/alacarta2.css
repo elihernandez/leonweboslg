@@ -1,0 +1,485 @@
+/* Estilos de A la Carta */
+
+	#alacarta {
+		/*position: absolute;
+		height: 100%;
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: hidden;*/
+	}
+
+	#alacarta #background {
+		z-index: 2;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-image: url('../images/fondos/gradiente_negro.png');
+		background-size: cover;
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		/*border: 3px solid white;*/
+	}
+
+	#alacarta #background .left-info{
+		position: absolute;
+		height: 10%;
+		width: 50%;
+		/*border: 1px solid green;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		align-content: center;
+	}
+
+	#alacarta #background .left-info img.logo {
+		width: auto;
+		height: 150%;
+		position: relative;
+		/*border: 1px solid red;*/
+	}
+
+	#alacarta #background .logo img {
+		width: 100%;
+		height: auto;
+		position: relative;
+		/*border: 1px solid red;*/
+	}
+
+	#alacarta #background .left-info .menu{
+		margin-left: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+
+	#alacarta #background .left-info .menu span{
+		min-width: 220px;
+		border: 1px solid white;
+		border-radius: 20px;
+		color: white;
+		text-align: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+
+	#alacarta #background .left-info .menu span h3{
+		font-size: 25px;
+		padding-top: 7.5px;
+		padding-bottom: 7.5px;
+		margin-left: 5px;
+	}
+
+	#alacarta #background .left-info .menu span i{
+		font-size: 25px;
+	}
+
+	#alacarta #background .right-info  {
+		position: absolute;
+		height: 10%;
+		left: 50%;
+		width: 50%;
+		/*border: 1px solid blue;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		align-content: center;
+		padding-right: 75px;
+	}
+
+	#alacarta #background .right-info .icons span i{
+		font-size: 30px;
+		color: white;
+		margin-left: 20px;
+	}
+
+	#alacarta img.background-movie {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+
+	#alacarta #background .info-movie {
+		position: absolute;
+		width: 100%;
+		top: 35%;
+		height: 60%;
+		color: white;
+		/*border: 1px solid white;*/
+	}
+
+	#alacarta #background .info-movie .info-1{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+		width: 40%;
+	}
+
+	#alacarta #background .info-movie .info-1 .el{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-content: center;
+	}
+
+	#alacarta #background .info-movie .info-1 .el .duration-movie{
+		margin-left: 10px;
+		margin-right: 50px;
+	}
+
+	#alacarta #background .info-movie h3.title-movie{
+		margin-top: 10px;
+		font-size: 50px;
+		font-weight: 900;
+	}
+
+	#alacarta #background .info-movie .text-group{
+		margin-top: 5px;
+		display: flex;
+		flex-direction: row;
+	}
+
+	#alacarta #background .info-movie h3.categories-movie{
+		font-size: 25px;
+		font-weight: 400;
+		margin-left: 10px;
+	}
+
+	#alacarta #background .info-movie h3.actors-movie{
+		font-size: 25px;
+		font-weight: 400;
+		margin-left: 10px;
+	}
+
+	#alacarta #background .info-movie h3.director-movie{
+		font-size: 25px;
+		font-weight: 400;
+		margin-left: 10px;
+	}
+
+	#alacarta #background .info-movie .text-description {
+		margin-top: 50px;
+	}
+
+	#alacarta #background .info-movie .description-movie {
+		margin-top: 10px;
+		width: 40%;
+		position: absolute;
+		font-weight: 400;
+		font-size: 30px;
+		/*border: 1px solid pink;*/
+		line-height: 30px;
+	}
+
+	.rectangle-movie{
+		z-index: 3;
+		position: absolute;
+		width: 230px;
+		height: 340px;	
+		outline: solid 5px white;
+		/*margin-left: 158.75px;*/
+		margin-left: calc(45% + 5px);
+		top: calc(55% + 48px);
+		transition-property: width, height;
+	  	transition-duration: 0ms;
+	  	transition-timing-function: linear;
+	  	transition-delay: 0ms;
+	}
+
+	.rectangle-movie.portrait{
+		width: 230px;
+		height: 340px;	
+	}
+
+	.rectangle-movie.landscape{
+		width: 350px;
+		height: 220px;		
+	}
+
+/* Estilos de A la Carta */
+
+
+/* Estilos del video */
+
+	#catalogo-alacarta #video {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+	}
+
+	#catalogo-alacarta #video video{
+		position:absolute;
+		height: 100%;
+		width: 100%;
+		top:0px;
+		left:0px;
+	}
+
+/* Estilos de video */
+
+
+/* Info de Canal */
+
+	#catalogo-alacarta #infoCanal.ocultarInfo {
+		top: 100%;
+	}
+
+	#catalogo-alacarta #infoCanal .item {
+		/*border: 2px solid red;*/
+	}
+
+	#catalogo-alacarta #infoCanal img {
+		position: relative;
+		width: 100%;
+		height: auto;	
+	}
+
+	#catalogo-alacarta #infoCanal .informacion-canal h3 {
+		margin: 10px 0px;
+	}
+
+	#catalogo-alacarta #infoCanal .informacion-canal h4 {
+		margin: 10px 0px;
+		font-weight: 400;
+	}
+
+/* Info de Canal */
+
+
+/* Estilos de la guía */
+
+	#catalogo-alacarta {
+		z-index: 2;
+		position: absolute;
+		top: 55%;
+		width: 100%;
+		height: 100%;
+		left: 45%;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		background-color: transparent;
+		transition-property: top;
+	  	transition-duration: 600ms;
+	  	transition-timing-function: ease-in-out;
+	  	transition-delay: 100ms;
+	}
+
+	#catalogo-alacarta.ocultarCatalogo {
+		top: 100%;
+	}
+
+	#catalogo-alacarta.displayCatalogo {
+		display: none;
+	}
+
+	#catalogo-alacarta .container {
+		width: 100%;
+		height: 423px;
+		padding: 0px 0px;
+		padding-bottom: 30px;
+		/*border: 1px solid green;*/
+		transition-property: transform;
+	  	transition-duration: 225ms;
+	  	transition-timing-function: linear;
+	  	transition-delay: 0ms;
+	}
+
+	#catalogo-alacarta .container .header {
+		margin: 0px 0px;
+		padding: 5px 10px;
+		width: 55%;
+		color: white;
+		background-color: transparent;
+	}
+
+	#catalogo-alacarta .container:focus-within > .header {
+		opacity: 0.9;
+	}
+
+	#catalogo-alacarta .container .header .posicion-contador{
+		margin-right: 5px;
+		font-size: 24px;
+	}
+
+	#catalogo-alacarta .container .header .texto-contador{
+		font-size: 24px;
+	}
+
+	#catalogo-alacarta .container .header .total-contador{
+		margin-left: 5px;
+		font-size: 24px;
+	}
+
+
+	/* Lista portrait */
+
+		#catalogo-alacarta .container .lista {
+			width: 100%;
+		  	display: flex;
+		  	padding: 0px 0px;
+		  	margin: 0px 0px;
+		  	/*transition-property: margin-left;
+	  		transition-duration: 225ms;
+	  		transition-timing-function: linear;
+	  		transition-delay: 0ms;*/
+		}
+
+		#catalogo-alacarta .container .lista .item {
+		  padding: 0px 0px;
+		  /*background: transparent;*/
+		  flex: 0 0 230px;
+		  text-align: center;
+		  margin: 5px 5px;
+		  transition-property: transform, background;
+	  		transition-duration: 225ms;
+	  		transition-timing-function: linear;
+	  		transition-delay: 0ms;
+		  color: white;
+		  background-color: rgba(0,0,0,1);
+		}
+
+		#catalogo-alacarta .container .lista .item:focus  {
+			/*outline: solid 5px white;*/
+			opacity: 1;
+		}
+
+		#catalogo-alacarta .container .lista .item:focus img  {
+			transform: scale(1);
+		}
+
+		#catalogo-alacarta .container .lista .item img {
+			position: relative;
+			width: 230px;
+			height: 345px;	
+			transform: scale(1);	
+			transition-property: transform;
+			transition-duration: 400ms;
+			transition-timing-function: ease;
+			transition-delay: 0ms;
+			background-color: rgba(0,0,0,0.5);
+		}
+
+		
+		#catalogo-alacarta .container .lista .item span {
+			position: absolute;
+			top: 45%;
+			text-align: center;
+			border-radius: 50%;
+			border: 1px solid white;
+			min-width: 40px;
+			min-height: 40px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			box-shadow: -.5px 0px 3px 0 rgba(0,0,0,0.2);
+			cursor: pointer;
+			transition-property: background-color, color;
+		  	transition-duration: 200ms;
+		  	transition-timing-function: ease-in-out;
+		  	transition-delay: 0ms;
+		  	color: rgba(0,0,0,0.8);
+		  	background-color: white;
+		}
+
+		#catalogo-alacarta .container .lista .item span i {
+			z-index: 2;
+			position: relative;
+			text-align: center;
+			min-width: 35px;
+			color: black
+		}
+
+		#catalogo-alacarta .container .lista .item h3 {
+			margin: 10px 0px;
+		}
+
+		#catalogo-alacarta .container .lista .item h4 {
+			margin: 10px 0px;
+			font-weight: 400;
+		}
+
+	/* Lista portrait */
+
+
+	/* Lista landscape */
+
+		#catalogo-alacarta .landscape {
+			width: 100%;
+			height: 303px;
+			/*height: 398px;*/
+			padding: 0px 0px;
+			padding-bottom: 30px;
+			/*border: 1px solid green;*/
+			transition-property: transform;
+		  	transition-duration: 375ms;
+		  	transition-timing-function: linear;
+		  	transition-delay: 0ms;
+		}
+
+
+		#catalogo-alacarta .container .lista-landscape {
+			width: 100%;
+		  	display: flex;
+		  	padding: 0px 0px;
+		  	margin: 0px 0px;
+		}
+
+		#catalogo-alacarta .container .lista-landscape .item {
+		  padding: 0px 0px;
+		  background: transparent;
+		  flex: 0 0 350px;
+		  text-align: center;
+		  margin: 5px 5px;
+		  transition-property: transform, background;
+		  transition-duration: 200ms;
+		  transition-timing-function: linear;
+		  transition-delay: 0ms;
+		  color: white;
+		  opacity: 0.7;
+		}
+
+		#catalogo-alacarta .container .lista-landscape .item:focus  {
+			/*outline: solid 5px white;*/
+			opacity: 0.9;
+		}
+
+		#catalogo-alacarta .container .lista-landscape .item:focus img  {
+			transform: scale(1);
+		}
+
+		#catalogo-alacarta .container .lista-landscape .item img {
+			position: relative;
+			width: 350px;
+			height: 220px;	
+			transform: scale(1);	
+			transition-property: transform;
+			transition-duration: 400ms;
+			transition-timing-function: ease;
+			transition-delay: 0ms;
+		}
+
+		#catalogo-alacarta .container .lista-landscape .item h3 {
+			margin: 10px 0px;
+		}
+
+		#catalogo-alacarta .container .lista-landscape .item h4 {
+			margin: 10px 0px;
+			font-weight: 400;
+		}
+
+	/* Lista landscape */
+
+/* Estilos de la guía */
